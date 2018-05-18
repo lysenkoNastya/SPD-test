@@ -1,0 +1,12 @@
+@import 'base/reset';
+
+@import 'utils/variables';
+@import 'utils/mixins';
+
+@import 'layout/header';
+@import 'layout/footer';
+
+@import 'components/buttons';
+@import 'components/carousel';
+
+@import 'page/index';
