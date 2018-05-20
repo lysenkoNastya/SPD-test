@@ -1,0 +1,350 @@
+/*Common*/
+.wrapper {
+  padding: 0 15px;
+  margin: 0 auto;
+  max-width: 1140px;
+
+  @media (max-width: 1024px) {
+    max-width: 1000px;
+  }
+
+  @media (max-width: 992px) {
+    max-width: 960px;
+  }
+
+  @media (max-width: 768px) {
+    max-width: 720px;
+  }
+
+  @media (max-width: 576px) {
+    max-width: 540px;
+  }
+}
+
+.section-awesome-title,
+.section-price-title {
+  font-family: $secondary-text-font;
+  text-transform: uppercase;
+  display: block;
+  @include title-underline();
+
+  &:after {
+    .title-bottom-border {
+      height: 2px;
+      width: 65px;
+      background-color: $secondary-brand-color;
+    }
+  }
+}
+
+.social-media-title,
+.section-sub-title {
+  margin-bottom: 15px;
+  @include sub-title-text();
+}
+
+.wrapper-icon,
+.awesome-wrapper-icon {
+  @include display-flex();
+  @include flex-shrink();
+  @include justify-content();
+  @include align-items();
+  color: $secondary-brand-color;
+  border: 2px solid $secondary-brand-color;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+}
+
+/*Social media section*/
+.section-social-media {
+  padding: 25px 0;
+  border-bottom: 1px solid $section-border;
+
+  @media (max-width: 768px) {
+    text-align: center;
+  }
+
+  &-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &-info {
+    display: inline-block;
+    margin-right: 40px;
+    flex-basis: 35%;
+    max-width: 35%;
+
+    @media (max-width: 768px) {
+      margin-right: 5px;
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+
+    .social-media-text {
+      margin-bottom: 25px;
+      @include light-gray-text();
+    }
+  }
+
+  .social-icon-list {
+    display: inline-block;
+    flex-basis: 60%;
+    max-width: 60%;
+
+    @media (max-width: 768px) {
+      flex-basis: 100%;
+      max-width: 100%;
+    }
+
+    &-item {
+      padding: 0 15px 0 40px;
+      display: inline-block;
+
+      @media (max-width: 1135px) {
+        padding-left: 25px;
+      }
+
+      @media (max-width: 960px) {
+        padding-left: 10px;
+      }
+
+      &-link {
+        display: inline-block;
+      }
+
+      .fa-icon {
+        font-size: 2.5rem;
+        color: $text-icon-color;
+
+        &:hover {
+          color: $secondary-brand-color;
+          transform: rotate(15deg);
+        }
+
+        @media (max-width: 576px) {
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+}
+
+/*Sub list section*/
+.section-sub-list {
+  padding: 110px 0 100px;
+
+  @media (max-width: 768px) {
+    padding: 50px 0;
+  }
+
+  @media (max-width: 576px) {
+    padding: 30px 0;
+  }
+
+  &-wrapper {
+    @include display-flex();
+    @include align-items();
+    @include justify-content();
+
+    @media (max-width: 992px) {
+      @include justify-content(); //justify-content: space-between;
+      @include flex-wrap();
+    }
+  }
+
+  .section-sub-title {
+    @include title-underline();
+    text-align: center;
+  }
+
+  .sub-list-text {
+    @include light-gray-text();
+  }
+
+  .info-text {
+    margin-bottom: 50px;
+  }
+
+  .info-title {
+    margin-bottom: 15px;
+  }
+
+  &-img {
+    margin: 0 185px 45px 0;
+    box-shadow: 10px 10px 10px 7px $box-shadow-color;
+
+    @media (max-width: 1140px) {
+      margin-right: 50px;
+    }
+
+    @media (max-width: 568px) {
+      margin: 0;
+      width: 100%;
+    }
+  }
+
+  .info-list-item {
+    margin-bottom: 45px;
+    @include display-flex();
+    @include justify-content();
+    //justify-content: flex-start;
+
+    .icon-section {
+      font-size: 1rem;
+    }
+
+    .info-list-item-wrapper {
+      margin-left: 30px;
+    }
+  }
+}
+
+/*Awesome section*/
+.section-awesome {
+  padding: 100px 0;
+  text-align: center;
+
+  &-info {
+    margin-bottom: 80px;
+    @include light-gray-text();
+  }
+
+  &-list {
+    @include display-flex();
+    @include flex-wrap();
+
+    .awesome-list-item {
+      margin-bottom: 30px;
+      padding: 0 10px;
+      max-width: 33%;
+      text-align: center;
+
+      @media (max-width: 768px) {
+        max-width: 50%;
+      }
+
+      @media (max-width: 576px) {
+        max-width: 100%;
+      }
+
+      .awesome-wrapper-icon {
+        margin-bottom: 30px;
+        width: 75px;
+        height: 75px;
+
+      }
+
+      .icon-section {
+        font-size: 2rem;
+      }
+
+      .list-item-link-title {
+        margin-bottom: 30px;
+      }
+
+      &-info {
+        @include light-gray-text();
+      }
+    }
+  }
+}
+
+/*Price section*/
+.section-price {
+  padding: 110px 0 100px;
+  text-align: center;
+  background-color: $bg-section;
+
+  &-info {
+    margin-bottom: 80px;
+    @include light-gray-text();
+  }
+
+  &-list {
+    @include display-flex();
+    @include flex-wrap();
+    align-items: center;
+
+    &-item {
+      padding: 0 20px;
+      margin-bottom: 30px;
+      @include flex-basis();//33%
+      max-width: 33%;
+      color: $price-text;
+      font-size: $secondary-text-font;
+
+      @media (max-width: 992px) {
+        max-width: 50%;
+      }
+
+      @media (max-width: 568px) {
+        max-width: 100%
+      }
+
+      &:hover {
+        .price-popular-text {
+          padding: 15px;
+          background-color: $secondary-brand-color;
+          display: block;
+          font-size: 1rem;
+          text-transform: uppercase;
+        }
+      }
+
+      .item-block {
+        background-color: $brand-color;
+      }
+
+      .price-status {
+        display: block;
+      }
+
+      .price-number {
+        font-size: 6rem;
+      }
+
+      .price-item-title,
+      .price-status {
+        padding: 20px 0;
+      }
+
+      .price {
+        padding-bottom: 0;
+        border-top: 2px solid $bg-section;
+        border-bottom: 2px solid $bg-section;
+        font-size: 2rem;
+      }
+
+      .price-status {
+        color: $text-color;
+        font-style: italic;
+      }
+
+      .price-popular-text {
+        border: 2px solid $secondary-brand-color;
+        display: block;
+        font-size: 0;
+      }
+
+      .status-price-list-item {
+        padding: 15px 0;
+        background-color: $price-text;
+        color: $text-color;
+        text-transform: uppercase;
+        border-bottom: 1px solid $bg-section;
+      }
+
+      .price-item-title-link:link,
+      .price-popular-link:link {
+        color: $price-text;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+
+@import "../utils/variables";

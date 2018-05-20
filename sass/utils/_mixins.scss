@@ -1,0 +1,68 @@
+/*Mixin text info*/
+@mixin light-gray-text() {
+  color: $text-color;
+  font-family: $text-font;
+}
+
+/*Mixin title*/
+@mixin sub-title-text() {
+  font-weight: 600;
+  font-family: $text-font;
+}
+
+/*Mixin title underline*/
+@mixin title-underline(){
+  margin-bottom: 65px;
+  position: relative;
+
+  &:before {
+    content: '';
+    position: absolute;
+    margin-top: 20px;
+    height: 2px;
+    background-color: $secondary-brand-color;
+    width: 65px;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+  }
+}
+
+/*Display flex*/
+@mixin display-flex() {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+/*Flex shrink*/
+@mixin flex-shrink() {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+/*Justify content*/
+@mixin justify-content() {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/*Justify content*/
+@mixin align-items() {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+/*Flex wrap*/
+@mixin flex-wrap() {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+/*Flex basis*/
+@mixin flex-basis() {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+}
