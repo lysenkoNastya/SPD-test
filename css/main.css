@@ -93,6 +93,63 @@ a:hover {
 /*Justify content*/
 /*Flex wrap*/
 /*Flex basis*/
+/*Flex align items*/
+/* line 1, ../sass/layout/_footer.scss */
+.footer {
+  padding: 20px 0 15px;
+  background-color: #37495e;
+  text-align: center;
+}
+/* line 6, ../sass/layout/_footer.scss */
+.footer .fa-icon,
+.footer .social-icon-list-item {
+  color: #ccc;
+}
+/* line 11, ../sass/layout/_footer.scss */
+.footer .social-icon-list-item {
+  margin-bottom: 15px;
+  padding: 0 15px 0 40px;
+  display: inline-block;
+}
+@media (max-width: 1135px) {
+  /* line 11, ../sass/layout/_footer.scss */
+  .footer .social-icon-list-item {
+    padding-left: 25px;
+  }
+}
+@media (max-width: 960px) {
+  /* line 11, ../sass/layout/_footer.scss */
+  .footer .social-icon-list-item {
+    padding-left: 10px;
+  }
+}
+/* line 24, ../sass/layout/_footer.scss */
+.footer .social-icon-list-item-link {
+  display: inline-block;
+}
+/* line 28, ../sass/layout/_footer.scss */
+.footer .social-icon-list-item .fa-icon {
+  font-size: 2.2rem;
+  color: #ccc;
+}
+/* line 32, ../sass/layout/_footer.scss */
+.footer .social-icon-list-item .fa-icon:hover {
+  color: #ff9b51;
+  transform: rotate(15deg);
+}
+@media (max-width: 576px) {
+  /* line 28, ../sass/layout/_footer.scss */
+  .footer .social-icon-list-item .fa-icon {
+    font-size: 1.5rem;
+  }
+}
+/* line 43, ../sass/layout/_footer.scss */
+.footer .copyright-text,
+.footer .copyright-icon {
+  color: #ccc;
+  font-family: "Raleway", sans-serif;
+}
+
 /*Common*/
 /* line 2, ../sass/page/_index.scss */
 .wrapper {
@@ -170,13 +227,14 @@ a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-negative: 0;
+  -webkit-flex-shrink: 0;
+  -ms-flex-shrink: 0;
   flex-shrink: 0;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
   justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
   align-items: center;
   color: #ff9b51;
   border: 2px solid #ff9b51;
@@ -207,6 +265,8 @@ a:hover {
 .section-social-media-info {
   display: inline-block;
   margin-right: 40px;
+  -webkit-flex-basis: 35%;
+  -ms-flex-basis: 35%;
   flex-basis: 35%;
   max-width: 35%;
 }
@@ -214,6 +274,8 @@ a:hover {
   /* line 75, ../sass/page/_index.scss */
   .section-social-media-info {
     margin-right: 5px;
+    -webkit-flex-basis: 100%;
+    -ms-flex-basis: 100%;
     flex-basis: 100%;
     max-width: 100%;
   }
@@ -227,12 +289,16 @@ a:hover {
 /* line 93, ../sass/page/_index.scss */
 .section-social-media .social-icon-list {
   display: inline-block;
+  -webkit-flex-basis: 60%;
+  -ms-flex-basis: 60%;
   flex-basis: 60%;
   max-width: 60%;
 }
 @media (max-width: 768px) {
   /* line 93, ../sass/page/_index.scss */
   .section-social-media .social-icon-list {
+    -webkit-flex-basis: 100%;
+    -ms-flex-basis: 100%;
     flex-basis: 100%;
     max-width: 100%;
   }
@@ -297,19 +363,20 @@ a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
   justify-content: center;
 }
 @media (max-width: 992px) {
   /* line 148, ../sass/page/_index.scss */
   .section-sub-list-wrapper {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    -webkit-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
@@ -372,8 +439,8 @@ a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
   justify-content: center;
 }
 /* line 199, ../sass/page/_index.scss */
@@ -396,19 +463,20 @@ a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
   justify-content: center;
 }
 @media (max-width: 992px) {
   /* line 214, ../sass/page/_index.scss */
   .section-standard-picture-wrapper-info {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    -webkit-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
@@ -418,19 +486,20 @@ a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
   align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
   justify-content: center;
 }
 @media (max-width: 992px) {
   /* line 225, ../sass/page/_index.scss */
   .section-standard-picture .standard-picture-wrapper-info {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+    -webkit-justify-content: space-between;
+    -ms-justify-content: space-between;
+    justify-content: space-between;
+    -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
@@ -498,6 +567,7 @@ a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
@@ -522,52 +592,59 @@ a:hover {
 }
 /* line 291, ../sass/page/_index.scss */
 .section-awesome-list .awesome-list-item .awesome-wrapper-icon {
-  margin-bottom: 30px;
+  margin: 0 auto 30px;
   width: 75px;
   height: 75px;
 }
-/* line 298, ../sass/page/_index.scss */
+/* line 297, ../sass/page/_index.scss */
 .section-awesome-list .awesome-list-item .icon-section {
   font-size: 2rem;
 }
-/* line 302, ../sass/page/_index.scss */
+/* line 301, ../sass/page/_index.scss */
 .section-awesome-list .awesome-list-item .list-item-link-title {
   margin-bottom: 30px;
 }
-/* line 306, ../sass/page/_index.scss */
+/* line 305, ../sass/page/_index.scss */
 .section-awesome-list .awesome-list-item-info {
   color: #86878b;
   font-family: "Open Sans", sans-serif;
 }
 
 /*Price section*/
-/* line 314, ../sass/page/_index.scss */
+/* line 313, ../sass/page/_index.scss */
 .section-price {
   padding: 110px 0 100px;
   text-align: center;
   background-color: #f5f5f5;
 }
-/* line 319, ../sass/page/_index.scss */
+/* line 318, ../sass/page/_index.scss */
 .section-price-info {
   margin-bottom: 80px;
   color: #86878b;
   font-family: "Open Sans", sans-serif;
 }
-/* line 324, ../sass/page/_index.scss */
+/* line 323, ../sass/page/_index.scss */
 .section-price-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
   align-items: center;
 }
 /* line 329, ../sass/page/_index.scss */
 .section-price-list-item {
   padding: 0 20px;
   margin-bottom: 30px;
-  -ms-flex-preferred-size: 30%;
-  flex-basis: 30%;
+  -webkit-flex-basis: 33%;
+  -ms-flex-basis: 33%;
+  flex-basis: 33%;
   max-width: 33%;
   color: #fff;
   font-size: "Raleway", sans-serif;
@@ -576,15 +653,21 @@ a:hover {
   /* line 329, ../sass/page/_index.scss */
   .section-price-list-item {
     max-width: 50%;
+    -webkit-flex-basis: 50%;
+    -ms-flex-basis: 50%;
+    flex-basis: 50%;
   }
 }
 @media (max-width: 568px) {
   /* line 329, ../sass/page/_index.scss */
   .section-price-list-item {
     max-width: 100%;
+    -webkit-flex-basis: 100%;
+    -ms-flex-basis: 100%;
+    flex-basis: 100%;
   }
 }
-/* line 346, ../sass/page/_index.scss */
+/* line 348, ../sass/page/_index.scss */
 .section-price-list-item:hover .price-popular-text {
   padding: 15px;
   background-color: #ff9b51;
@@ -592,42 +675,42 @@ a:hover {
   font-size: 1rem;
   text-transform: uppercase;
 }
-/* line 355, ../sass/page/_index.scss */
+/* line 357, ../sass/page/_index.scss */
 .section-price-list-item .item-block {
   background-color: #37495e;
 }
-/* line 359, ../sass/page/_index.scss */
+/* line 361, ../sass/page/_index.scss */
 .section-price-list-item .price-status {
   display: block;
 }
-/* line 363, ../sass/page/_index.scss */
+/* line 365, ../sass/page/_index.scss */
 .section-price-list-item .price-number {
   font-size: 6rem;
 }
-/* line 367, ../sass/page/_index.scss */
+/* line 369, ../sass/page/_index.scss */
 .section-price-list-item .price-item-title,
 .section-price-list-item .price-status {
   padding: 20px 0;
 }
-/* line 372, ../sass/page/_index.scss */
+/* line 374, ../sass/page/_index.scss */
 .section-price-list-item .price {
   padding-bottom: 0;
   border-top: 2px solid #f5f5f5;
   border-bottom: 2px solid #f5f5f5;
   font-size: 2rem;
 }
-/* line 379, ../sass/page/_index.scss */
+/* line 381, ../sass/page/_index.scss */
 .section-price-list-item .price-status {
   color: #86878b;
   font-style: italic;
 }
-/* line 384, ../sass/page/_index.scss */
+/* line 386, ../sass/page/_index.scss */
 .section-price-list-item .price-popular-text {
   border: 2px solid #ff9b51;
   display: block;
   font-size: 0;
 }
-/* line 390, ../sass/page/_index.scss */
+/* line 392, ../sass/page/_index.scss */
 .section-price-list-item .status-price-list-item {
   padding: 15px 0;
   background-color: #fff;
@@ -635,7 +718,7 @@ a:hover {
   text-transform: uppercase;
   border-bottom: 1px solid #f5f5f5;
 }
-/* line 398, ../sass/page/_index.scss */
+/* line 400, ../sass/page/_index.scss */
 .section-price-list-item .price-item-title-link:link,
 .section-price-list-item .price-popular-link:link {
   color: #fff;
