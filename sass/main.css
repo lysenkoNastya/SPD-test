@@ -66,6 +66,7 @@ a:hover {
 /*Flex wrap*/
 /*Flex basis*/
 /*Flex align items*/
+/*Flex direction*/
 .footer {
   padding: 20px 0 15px;
   background-color: #37495e;
@@ -117,15 +118,20 @@ a:hover {
     .wrapper {
       max-width: 540px; } }
 
+a:link {
+  text-decoration: none; }
+
 .section-awesome-title,
-.section-price-title {
+.section-price-title,
+.section-contact-us-title {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
   display: block;
   margin-bottom: 65px;
   position: relative; }
   .section-awesome-title:before,
-  .section-price-title:before {
+  .section-price-title:before,
+  .section-contact-us-title:before {
     content: '';
     position: absolute;
     margin-top: 20px;
@@ -136,7 +142,8 @@ a:hover {
     top: 100%;
     transform: translateX(-50%); }
   .section-awesome-title:after .title-bottom-border,
-  .section-price-title:after .title-bottom-border {
+  .section-price-title:after .title-bottom-border,
+  .section-contact-us-title:after .title-bottom-border {
     height: 2px;
     width: 65px;
     background-color: #ff9b51; }
@@ -151,7 +158,9 @@ a:hover {
 .wrapper-icon,
 .awesome-wrapper-icon {
   display: -webkit-box;
+  display: -moz-box;
   display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
   -webkit-flex-shrink: 0;
   -ms-flex-shrink: 0;
@@ -241,7 +250,9 @@ a:hover {
       padding: 30px 0; } }
   .section-sub-list-wrapper {
     display: -webkit-box;
+    display: -moz-box;
     display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     -webkit-align-items: center;
     -ms-align-items: center;
@@ -292,15 +303,17 @@ a:hover {
   .section-sub-list .info-list-item {
     margin-bottom: 45px;
     display: -webkit-box;
+    display: -moz-box;
     display: -ms-flexbox;
-    display: flex;
-    -webkit-justify-content: center;
-    -ms-justify-content: center;
-    justify-content: center; }
+    display: -webkit-flex;
+    display: flex; }
     .section-sub-list .info-list-item .icon-section {
       font-size: 1rem; }
     .section-sub-list .info-list-item .info-list-item-wrapper {
-      margin-left: 30px; }
+      margin-left: 30px;
+      -webkit-flex-basis: 100%;
+      -ms-flex-basis: 100%;
+      flex-basis: 100%; }
 
 /*Standard picture section*/
 .section-standard-picture {
@@ -308,7 +321,9 @@ a:hover {
   background-color: #f5f5f5; }
   .section-standard-picture-wrapper-info {
     display: -webkit-box;
+    display: -moz-box;
     display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     -webkit-align-items: center;
     -ms-align-items: center;
@@ -326,7 +341,9 @@ a:hover {
         flex-wrap: wrap; } }
   .section-standard-picture .standard-picture-wrapper-info {
     display: -webkit-box;
+    display: -moz-box;
     display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     -webkit-align-items: center;
     -ms-align-items: center;
@@ -382,7 +399,9 @@ a:hover {
     font-family: "Open Sans", sans-serif; }
   .section-awesome-list {
     display: -webkit-box;
+    display: -moz-box;
     display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
@@ -421,7 +440,9 @@ a:hover {
     font-family: "Open Sans", sans-serif; }
   .section-price-list {
     display: -webkit-box;
+    display: -moz-box;
     display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
     -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
@@ -490,6 +511,58 @@ a:hover {
       .section-price-list-item .price-popular-link:link {
         color: #fff;
         text-decoration: none; }
+
+/*Contact us section*/
+.section-contact-us {
+  padding: 105px 0 80px;
+  text-align: center; }
+  .section-contact-us .section-contact-us-info {
+    margin-bottom: 95px;
+    color: #86878b;
+    font-family: "Open Sans", sans-serif; }
+  .section-contact-us .form-contact-us {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
+    .section-contact-us .form-contact-us .form-block {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-flex-basis: 50%;
+      -ms-flex-basis: 50%;
+      flex-basis: 50%;
+      max-width: 50%; }
+      @media (max-width: 768px) {
+        .section-contact-us .form-contact-us .form-block {
+          margin-bottom: 30px;
+          -webkit-flex-basis: 100%;
+          -ms-flex-basis: 100%;
+          flex-basis: 100%;
+          max-width: 100%; } }
+    .section-contact-us .form-contact-us .form-block .item-contact-us,
+    .section-contact-us .form-contact-us .form-block .field-contact-us {
+      color: #bdbdbd;
+      font-family: "Open Sans", sans-serif;
+      border: none;
+      border-bottom: 1px solid #b7b7b7; }
+    .section-contact-us .form-contact-us .form-block .field-contact-us {
+      padding-bottom: 10px;
+      margin: 34px 70px 0 0; }
+    .section-contact-us .form-contact-us .form-block .item-contact-us {
+      overflow: hidden; }
 
 /*Colors*/
 /*Fonts*/

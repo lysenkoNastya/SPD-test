@@ -21,8 +21,13 @@
   }
 }
 
+a:link {
+  text-decoration: none;
+}
+
 .section-awesome-title,
-.section-price-title {
+.section-price-title,
+.section-contact-us-title {
   font-family: $secondary-text-font;
   text-transform: uppercase;
   display: block;
@@ -193,8 +198,6 @@
   .info-list-item {
     margin-bottom: 45px;
     @include display-flex();
-    @include justify-content();
-    //justify-content: flex-start;
 
     .icon-section {
       font-size: 1rem;
@@ -202,6 +205,7 @@
 
     .info-list-item-wrapper {
       margin-left: 30px;
+      @include flex-basis(100%);
     }
   }
 }
@@ -401,6 +405,56 @@
       .price-popular-link:link {
         color: $price-text;
         text-decoration: none;
+      }
+    }
+  }
+}
+
+/*Contact us section*/
+.section-contact-us {
+  padding: 105px 0 80px;
+  text-align: center;
+
+  .section-contact-us-info {
+    margin-bottom: 95px;
+    @include light-gray-text();
+  }
+
+  .form-contact-us {
+    @include display-flex();
+    @include justify-content();
+    @include flex-wrap();
+
+    .form-block {
+      @include display-flex();
+      @include flex-direction(column);
+      @include flex-basis(50%);
+      max-width: 50%;
+
+      @media (max-width: 768px) {
+        margin-bottom: 30px;
+        @include flex-basis(100%);
+        max-width: 100%;
+      }
+    }
+
+    .form-block {
+
+      .item-contact-us,
+      .field-contact-us {
+        color: $form-text;
+        font-family: $text-font;
+        border: none;
+        border-bottom: 1px solid $section-border;
+      }
+
+      .field-contact-us {
+        padding-bottom: 10px;
+        margin: 34px 70px 0 0;
+      }
+
+      .item-contact-us {
+        overflow: hidden;
       }
     }
   }
