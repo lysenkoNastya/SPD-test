@@ -84,9 +84,10 @@ a:hover {
 
 /*Colors*/
 /*Fonts*/
-/*Mixin text info*/
-/*Mixin title*/
-/*Mixin title underline*/
+/*Text info*/
+/*Sub title*/
+/*Title underline*/
+/*Buttons*/
 /*Display flex*/
 /*Flex shrink*/
 /*Justify content*/
@@ -748,19 +749,26 @@ a:link {
   text-decoration: none;
 }
 
-/*Contact us section*/
+/*Stylish axure design section*/
 /* line 414, ../sass/page/_index.scss */
+.section-stylish-axure-design {
+  padding: 70px 0 60px;
+  background-image: url("../images/paralax.png");
+}
+
+/*Contact us section*/
+/* line 420, ../sass/page/_index.scss */
 .section-contact-us {
   padding: 105px 0 80px;
   text-align: center;
 }
-/* line 418, ../sass/page/_index.scss */
+/* line 424, ../sass/page/_index.scss */
 .section-contact-us .section-contact-us-info {
   margin-bottom: 95px;
   color: #86878b;
   font-family: "Open Sans", sans-serif;
 }
-/* line 423, ../sass/page/_index.scss */
+/* line 429, ../sass/page/_index.scss */
 .section-contact-us .form-contact-us {
   display: -webkit-box;
   display: -moz-box;
@@ -774,8 +782,9 @@ a:link {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-/* line 428, ../sass/page/_index.scss */
+/* line 434, ../sass/page/_index.scss */
 .section-contact-us .form-contact-us .form-block {
+  margin-bottom: 40px;
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -790,7 +799,7 @@ a:link {
   max-width: 50%;
 }
 @media (max-width: 768px) {
-  /* line 428, ../sass/page/_index.scss */
+  /* line 434, ../sass/page/_index.scss */
   .section-contact-us .form-contact-us .form-block {
     margin-bottom: 30px;
     -webkit-flex-basis: 100%;
@@ -799,7 +808,7 @@ a:link {
     max-width: 100%;
   }
 }
-/* line 443, ../sass/page/_index.scss */
+/* line 447, ../sass/page/_index.scss */
 .section-contact-us .form-contact-us .form-block .item-contact-us,
 .section-contact-us .form-contact-us .form-block .field-contact-us {
   color: #bdbdbd;
@@ -807,12 +816,35 @@ a:link {
   border: none;
   border-bottom: 1px solid #b7b7b7;
 }
-/* line 451, ../sass/page/_index.scss */
+/* line 455, ../sass/page/_index.scss */
 .section-contact-us .form-contact-us .form-block .field-contact-us {
   padding-bottom: 10px;
   margin: 34px 70px 0 0;
 }
-/* line 456, ../sass/page/_index.scss */
+/* line 460, ../sass/page/_index.scss */
 .section-contact-us .form-contact-us .form-block .item-contact-us {
   overflow: hidden;
+}
+/* line 465, ../sass/page/_index.scss */
+.section-contact-us .form-contact-us .sent-message-btn {
+  padding: 15px 25px;
+  background-color: #ff9b51;
+  border: 0 solid #fff;
+  border-radius: 10px;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  display: block;
+  border: none;
+}
+/* line 470, ../sass/page/_index.scss */
+.section-contact-us .form-contact-us .download-btn {
+  padding: 15px 25px;
+  background-color: 1;
+  border: 0 solid #fff;
+  border-radius: 0;
+  color: #fff;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  display: block;
 }

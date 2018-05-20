@@ -1,16 +1,16 @@
-/*Mixin text info*/
+/*Text info*/
 @mixin light-gray-text() {
   color: $text-color;
   font-family: $text-font;
 }
 
-/*Mixin title*/
+/*Sub title*/
 @mixin sub-title-text() {
   font-weight: 600;
   font-family: $text-font;
 }
 
-/*Mixin title underline*/
+/*Title underline*/
 @mixin title-underline(){
   margin-bottom: 65px;
   position: relative;
@@ -26,6 +26,18 @@
     top: 100%;
     transform: translateX(-50%);
   }
+}
+
+/*Buttons*/
+@mixin make-btn($bg-color: none, $border-width: 0, $border-radius: 0) {
+  padding: 15px 25px;
+  background-color: $bg-color;
+  border: $border-width solid $price-text;
+  border-radius: $border-radius;
+  color: $price-text;
+  font-family: $text-font;
+  font-weight: 600;
+  display: block;
 }
 
 /*Display flex*/

@@ -410,6 +410,12 @@ a:link {
   }
 }
 
+/*Stylish axure design section*/
+.section-stylish-axure-design {
+  padding: 70px 0 60px;
+  background-image: url("../images/paralax.png");
+}
+
 /*Contact us section*/
 .section-contact-us {
   padding: 105px 0 80px;
@@ -426,6 +432,7 @@ a:link {
     @include flex-wrap();
 
     .form-block {
+      margin-bottom: 40px;
       @include display-flex();
       @include flex-direction(column);
       @include flex-basis(50%);
@@ -436,9 +443,6 @@ a:link {
         @include flex-basis(100%);
         max-width: 100%;
       }
-    }
-
-    .form-block {
 
       .item-contact-us,
       .field-contact-us {
@@ -456,6 +460,15 @@ a:link {
       .item-contact-us {
         overflow: hidden;
       }
+    }
+
+    .sent-message-btn {
+      @include make-btn($secondary-brand-color, 0, 10px);
+      border: none;
+    }
+
+    .download-btn {
+      @include make-btn(1, 0);
     }
   }
 }
