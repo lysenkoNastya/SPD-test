@@ -1,0 +1,93 @@
+.header {
+
+  .main-menu {
+    padding: 20px 0;
+    background-color: $brand-color;
+
+    &-wrapper {
+      @include display-flex();
+      @include flex-wrap();
+      @include justify-content(space-between);
+    }
+
+    &-item {
+      display: inline-block;
+      color: $nav-color;
+    }
+  }
+  .main-menu-link {
+    display: inline-block;
+
+    &:link {
+      margin-left: 45px;
+      @include light-gray-text();
+      font-weight: 600;
+
+      &:hover {
+        padding: 20px;
+        margin-left: 25px;
+        color: $nav-color;
+        background-color: $secondary-brand-color;
+      }
+    }
+  }
+
+  &-content {
+    padding: 140px 0;
+    background-image: url("../images/bg_header.png");
+
+    .content {
+      text-align: left;
+      color: $price-text;
+      @include flex-basis(50%);
+      max-width: 50%;
+
+      @media (max-width: 768px) {
+        margin-bottom: 30px;
+        @include flex-basis(100%);
+        max-width: 100%;
+      }
+
+      &-title {
+        font-family: $secondary-text-font;
+        text-transform: uppercase;
+        display: block;
+        @include title-underline($price-text);
+        font-weight: 400;
+
+        &:before {
+          left: 33px;
+        }
+      }
+
+      &-text {
+        margin-bottom: 40px;
+        font-family: $text-font;
+      }
+
+      .download-btn {
+        @include make-btn(transparent, 1, 0);
+      }
+    }
+  }
+
+  .content-wrapper {
+    @include display-flex();
+    @include justify-content(space-between);
+  }
+
+  &-form {
+    @include flex-basis(30%);
+    max-width: 30%;
+
+    @media (max-width: 768px) {
+      margin-bottom: 30px;
+      @include flex-basis(100%);
+      max-width: 100%;
+    }
+
+    .field-header-form {
+      width: 100%;
+    }
+  }
+}

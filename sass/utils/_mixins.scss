@@ -11,7 +11,7 @@
 }
 
 /*Title underline*/
-@mixin title-underline(){
+@mixin title-underline($bg-color: $secondary-brand-color){
   margin-bottom: 65px;
   position: relative;
 
@@ -20,7 +20,7 @@
     position: absolute;
     margin-top: 20px;
     height: 2px;
-    background-color: $secondary-brand-color;
+    background-color: $bg-color;
     width: 65px;
     left: 50%;
     top: 100%;
@@ -37,7 +37,6 @@
   color: $price-text;
   font-family: $text-font;
   font-weight: 600;
-  display: block;
 }
 
 /*Display flex*/
