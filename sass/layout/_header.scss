@@ -8,6 +8,7 @@
       @include display-flex();
       @include flex-wrap();
       @include justify-content(space-between);
+      @include align-items();
     }
 
     &-item {
@@ -18,7 +19,8 @@
   .main-menu-link {
     display: inline-block;
 
-    &:link {
+    &:link,
+    &:visited {
       margin-left: 45px;
       @include light-gray-text();
       font-weight: 600;
@@ -67,7 +69,11 @@
       }
 
       .download-btn {
-        @include make-btn(transparent, 1, 0);
+        @include make-btn(transparent, 1px, 0);
+
+        &:hover {
+          background-color: $secondary-brand-color;
+        }
       }
     }
   }

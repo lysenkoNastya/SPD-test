@@ -6,7 +6,7 @@ $(document).ready(function(){
         slidesToScroll: 1,
         responsive: [
             {
-                breakpoint: 768,
+                breakpoint: 992,
                 settings: {
                     slidesToShow: 2
                 }
@@ -21,4 +21,8 @@ $(document).ready(function(){
     });
 
 });
+
+window.FontAwesomeConfig = {
+    searchPseudoElements: true
+};
 

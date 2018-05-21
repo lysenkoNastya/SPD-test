@@ -82,18 +82,21 @@ a:hover {
     flex-wrap: wrap;
     -webkit-justify-content: space-between;
     -ms-justify-content: space-between;
-    justify-content: space-between; }
+    justify-content: space-between;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center; }
   .header .main-menu-item {
     display: inline-block;
     color: #c1c7cd; }
 .header .main-menu-link {
   display: inline-block; }
-  .header .main-menu-link:link {
+  .header .main-menu-link:link, .header .main-menu-link:visited {
     margin-left: 45px;
     color: #86878b;
     font-family: "Open Sans", sans-serif;
     font-weight: 600; }
-    .header .main-menu-link:link:hover {
+    .header .main-menu-link:link:hover, .header .main-menu-link:visited:hover {
       padding: 20px;
       margin-left: 25px;
       color: #c1c7cd;
@@ -141,11 +144,14 @@ a:hover {
     .header-content .content .download-btn {
       padding: 15px 25px;
       background-color: transparent;
-      border: 1 solid #fff;
+      border: 1px solid #fff;
       border-radius: 0;
       color: #fff;
       font-family: "Open Sans", sans-serif;
-      font-weight: 600; }
+      font-weight: 600;
+      cursor: pointer; }
+      .header-content .content .download-btn:hover {
+        background-color: #ff9b51; }
 .header .content-wrapper {
   display: -webkit-box;
   display: -moz-box;
@@ -545,7 +551,7 @@ a:link {
   text-align: center;
   background-color: #f5f5f5; }
   .section-price-info {
-    margin-bottom: 80px;
+    margin-bottom: 30px;
     color: #86878b;
     font-family: "Open Sans", sans-serif; }
   .section-price-list {
@@ -560,11 +566,11 @@ a:link {
     -webkit-justify-content: center;
     -ms-justify-content: center;
     justify-content: center;
-    -webkit-align-items: center;
-    -ms-align-items: center;
-    align-items: center; }
+    -webkit-align-items: flex-end;
+    -ms-align-items: flex-end;
+    align-items: flex-end; }
     .section-price-list-item {
-      padding: 0 20px;
+      padding: 55px 20px 0;
       margin-bottom: 30px;
       -webkit-flex-basis: 33%;
       -ms-flex-basis: 33%;
@@ -584,12 +590,13 @@ a:link {
           -webkit-flex-basis: 100%;
           -ms-flex-basis: 100%;
           flex-basis: 100%; } }
-      .section-price-list-item:hover .price-popular-text {
-        padding: 15px;
-        background-color: #ff9b51;
-        display: block;
-        font-size: 1rem;
-        text-transform: uppercase; }
+      .section-price-list-item:hover {
+        padding-top: 0; }
+        .section-price-list-item:hover .price-popular-text {
+          padding: 15px;
+          background-color: #ff9b51;
+          font-size: 1rem;
+          text-transform: uppercase; }
       .section-price-list-item .item-block {
         background-color: #37495e; }
       .section-price-list-item .price-status {
@@ -618,7 +625,9 @@ a:link {
         text-transform: uppercase;
         border-bottom: 1px solid #f5f5f5; }
       .section-price-list-item .price-item-title-link:link,
-      .section-price-list-item .price-popular-link:link {
+      .section-price-list-item .price-item-title-link:visited,
+      .section-price-list-item .price-popular-link:link,
+      .section-price-list-item .price-popular-link:visited {
         color: #fff;
         text-decoration: none; }
 
@@ -631,14 +640,15 @@ a:link {
     color: #86878b;
     font-family: "Open Sans", sans-serif; }
   .section-customers-saying .customers-info {
+    padding-left: 55px;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
     display: -webkit-flex;
     display: flex;
-    -webkit-justify-content: center;
-    -ms-justify-content: center;
-    justify-content: center;
+    -webkit-justify-content: flex-start;
+    -ms-justify-content: flex-start;
+    justify-content: flex-start;
     -webkit-align-items: center;
     -ms-align-items: center;
     align-items: center; }
@@ -648,7 +658,7 @@ a:link {
         color: #86878b;
         font-family: "Open Sans", sans-serif; }
   .section-customers-saying .blockquote-customers {
-    margin-bottom: 20px;
+    margin: 0 55px 20px;
     padding: 25px 10px;
     position: relative;
     color: #86878b;
@@ -658,13 +668,28 @@ a:link {
     .section-customers-saying .blockquote-customers:after {
       content: '';
       position: absolute;
-      left: 75px;
+      left: 15px;
       bottom: -35px;
       border: 20px solid transparent;
       border-top: 20px solid #f5f5f5; }
+  .section-customers-saying .slick-next {
+    right: 0; }
+    .section-customers-saying .slick-next:before {
+      content: "\f105"; }
+  .section-customers-saying .slick-prev {
+    left: 0; }
+    .section-customers-saying .slick-prev:before {
+      content: "\f104"; }
   .section-customers-saying .slick-prev:before,
   .section-customers-saying .slick-next:before {
-    color: #ff9b51; }
+    color: #ff9b51;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 2.5rem; }
+    @media (max-width: 576px) {
+      .section-customers-saying .slick-prev:before,
+      .section-customers-saying .slick-next:before {
+        content: ""; } }
 
 /*Stylish axure design section*/
 .section-stylish-axure-design {
@@ -682,11 +707,14 @@ a:link {
   .section-stylish-axure-design .download-btn {
     padding: 15px 25px;
     background-color: transparent;
-    border: 1 solid #fff;
+    border: 1px solid #fff;
     border-radius: 0;
     color: #fff;
     font-family: "Open Sans", sans-serif;
-    font-weight: 600; }
+    font-weight: 600;
+    cursor: pointer; }
+    .section-stylish-axure-design .download-btn:hover {
+      background-color: #ff9b51; }
 
 /*Contact us section*/
 .section-contact-us {
@@ -743,14 +771,17 @@ a:link {
     .section-contact-us .form-contact-us .sent-message-btn {
       padding: 15px 25px;
       background-color: #ff9b51;
-      border: 0 solid #fff;
+      border: 0px solid #fff;
       border-radius: 10px;
       color: #fff;
       font-family: "Open Sans", sans-serif;
       font-weight: 600;
-      border: none; }
-
-/*Colors*/
-/*Fonts*/
+      cursor: pointer; }
+      .section-contact-us .form-contact-us .sent-message-btn:hover {
+        padding-bottom: 13px;
+        background-color: transparent;
+        color: #ff9b51;
+        border-color: #ff9b51;
+        border-width: 1px; }
 
 /*# sourceMappingURL=main.css.map */

@@ -323,7 +323,7 @@ a:link {
   background-color: $bg-section;
 
   &-info {
-    margin-bottom: 80px;
+    margin-bottom: 30px;
     @include light-gray-text();
   }
 
@@ -331,10 +331,10 @@ a:link {
     @include display-flex();
     @include flex-wrap();
     @include justify-content();
-    @include align-items();
+    @include align-items(flex-end);
 
     &-item {
-      padding: 0 20px;
+      padding: 55px 20px 0;
       margin-bottom: 30px;
       @include flex-basis(33%);
       max-width: 33%;
@@ -352,10 +352,10 @@ a:link {
       }
 
       &:hover {
+        padding-top: 0;
         .price-popular-text {
           padding: 15px;
           background-color: $secondary-brand-color;
-          display: block;
           font-size: 1rem;
           text-transform: uppercase;
         }
@@ -405,7 +405,9 @@ a:link {
       }
 
       .price-item-title-link:link,
-      .price-popular-link:link {
+      .price-item-title-link:visited,
+      .price-popular-link:link,
+      .price-popular-link:visited {
         color: $price-text;
         text-decoration: none;
       }
@@ -424,8 +426,9 @@ a:link {
   }
 
   .customers-info {
+    padding-left: 55px;
     @include display-flex();
-    @include justify-content();
+    @include justify-content(flex-start);
     @include align-items();
 
     .customers-text-info {
@@ -438,7 +441,7 @@ a:link {
   }
 
   .blockquote-customers {
-    margin-bottom: 20px;
+    margin: 0 55px 20px;
     padding: 25px 10px;
     position: relative;
     @include light-gray-text();
@@ -448,16 +451,40 @@ a:link {
     &:after {
       content: '';
       position: absolute;
-      left: 75px;
+      left: 15px;
       bottom: -35px;
       border: 20px solid transparent;
       border-top: 20px solid $bg-section;
     }
   }
 
-  .slick-prev:before,
-  .slick-next:before {
-    color: $secondary-brand-color;
+  .slick-next {
+    right: 0;
+    &:before {
+      content: "\f105";
+    }
+  }
+
+  .slick-prev {
+    left: 0;
+
+    &:before {
+      content: "\f104";
+    }
+  }
+
+  .slick-prev,
+  .slick-next {
+    &:before {
+      color: $secondary-brand-color;
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      font-size: 2.5rem;
+
+      @media (max-width: 576px) {
+        content: "";
+      }
+    }
   }
 }
 
@@ -479,7 +506,11 @@ a:link {
   }
 
   .download-btn {
-    @include make-btn(transparent, 1, 0);
+    @include make-btn(transparent, 1px, 0);
+
+    &:hover {
+      background-color: $secondary-brand-color;
+    }
   }
 }
 
@@ -530,10 +561,16 @@ a:link {
     }
 
     .sent-message-btn {
-      @include make-btn($secondary-brand-color, 0, 10px);
-      border: none;
+      @include make-btn($secondary-brand-color, 0px, 10px);
+
+      &:hover {
+        padding-bottom: 13px;
+        background-color: transparent;
+        color: $secondary-brand-color;
+        border-color: $secondary-brand-color;
+        border-width: 1px;
+      }
     }
   }
 }
 
-@import "../utils/variables";
