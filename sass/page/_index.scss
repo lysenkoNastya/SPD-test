@@ -422,6 +422,43 @@ a:link {
     margin-bottom: 55px;
     @include light-gray-text();
   }
+
+  .customers-info {
+    @include display-flex();
+    @include justify-content();
+    @include align-items();
+
+    .customers-text-info {
+      margin-left: 20px;
+
+      .customers-saying-position {
+        @include light-gray-text();
+      }
+    }
+  }
+
+  .blockquote-customers {
+    margin-bottom: 20px;
+    padding: 25px 10px;
+    position: relative;
+    @include light-gray-text();
+    text-align: left;
+    background-color: $bg-section;
+
+    &:after {
+      content: '';
+      position: absolute;
+      left: 75px;
+      bottom: -35px;
+      border: 20px solid transparent;
+      border-top: 20px solid $bg-section;
+    }
+  }
+
+  .slick-prev:before,
+  .slick-next:before {
+    color: $secondary-brand-color;
+  }
 }
 
 /*Stylish axure design section*/

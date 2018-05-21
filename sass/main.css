@@ -100,7 +100,8 @@ a:hover {
       background-color: #ff9b51; }
 .header-content {
   padding: 140px 0;
-  background-image: url("../images/bg_header.png"); }
+  background-image: url("../images/bg_header.png");
+  background-size: cover; }
   .header-content .content {
     text-align: left;
     color: #fff;
@@ -629,6 +630,41 @@ a:link {
     margin-bottom: 55px;
     color: #86878b;
     font-family: "Open Sans", sans-serif; }
+  .section-customers-saying .customers-info {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center; }
+    .section-customers-saying .customers-info .customers-text-info {
+      margin-left: 20px; }
+      .section-customers-saying .customers-info .customers-text-info .customers-saying-position {
+        color: #86878b;
+        font-family: "Open Sans", sans-serif; }
+  .section-customers-saying .blockquote-customers {
+    margin-bottom: 20px;
+    padding: 25px 10px;
+    position: relative;
+    color: #86878b;
+    font-family: "Open Sans", sans-serif;
+    text-align: left;
+    background-color: #f5f5f5; }
+    .section-customers-saying .blockquote-customers:after {
+      content: '';
+      position: absolute;
+      left: 75px;
+      bottom: -35px;
+      border: 20px solid transparent;
+      border-top: 20px solid #f5f5f5; }
+  .section-customers-saying .slick-prev:before,
+  .section-customers-saying .slick-next:before {
+    color: #ff9b51; }
 
 /*Stylish axure design section*/
 .section-stylish-axure-design {

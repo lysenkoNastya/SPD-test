@@ -142,8 +142,9 @@ a:hover {
 .header-content {
   padding: 140px 0;
   background-image: url("../images/bg_header.png");
+  background-size: cover;
 }
-/* line 39, ../sass/layout/_header.scss */
+/* line 40, ../sass/layout/_header.scss */
 .header-content .content {
   text-align: left;
   color: #fff;
@@ -153,7 +154,7 @@ a:hover {
   max-width: 50%;
 }
 @media (max-width: 768px) {
-  /* line 39, ../sass/layout/_header.scss */
+  /* line 40, ../sass/layout/_header.scss */
   .header-content .content {
     margin-bottom: 30px;
     -webkit-flex-basis: 100%;
@@ -162,7 +163,7 @@ a:hover {
     max-width: 100%;
   }
 }
-/* line 51, ../sass/layout/_header.scss */
+/* line 52, ../sass/layout/_header.scss */
 .header-content .content-title {
   font-family: "Raleway", sans-serif;
   text-transform: uppercase;
@@ -183,16 +184,16 @@ a:hover {
   top: 100%;
   transform: translateX(-50%);
 }
-/* line 58, ../sass/layout/_header.scss */
+/* line 59, ../sass/layout/_header.scss */
 .header-content .content-title:before {
   left: 33px;
 }
-/* line 63, ../sass/layout/_header.scss */
+/* line 64, ../sass/layout/_header.scss */
 .header-content .content-text {
   margin-bottom: 40px;
   font-family: "Open Sans", sans-serif;
 }
-/* line 68, ../sass/layout/_header.scss */
+/* line 69, ../sass/layout/_header.scss */
 .header-content .content .download-btn {
   padding: 15px 25px;
   background-color: transparent;
@@ -202,7 +203,7 @@ a:hover {
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
 }
-/* line 74, ../sass/layout/_header.scss */
+/* line 75, ../sass/layout/_header.scss */
 .header .content-wrapper {
   display: -webkit-box;
   display: -moz-box;
@@ -213,7 +214,7 @@ a:hover {
   -ms-justify-content: space-between;
   justify-content: space-between;
 }
-/* line 79, ../sass/layout/_header.scss */
+/* line 80, ../sass/layout/_header.scss */
 .header-form {
   -webkit-flex-basis: 30%;
   -ms-flex-basis: 30%;
@@ -221,7 +222,7 @@ a:hover {
   max-width: 30%;
 }
 @media (max-width: 768px) {
-  /* line 79, ../sass/layout/_header.scss */
+  /* line 80, ../sass/layout/_header.scss */
   .header-form {
     margin-bottom: 30px;
     -webkit-flex-basis: 100%;
@@ -230,7 +231,7 @@ a:hover {
     max-width: 100%;
   }
 }
-/* line 89, ../sass/layout/_header.scss */
+/* line 90, ../sass/layout/_header.scss */
 .header-form .field-header-form {
   width: 100%;
 }
@@ -907,27 +908,74 @@ a:link {
   color: #86878b;
   font-family: "Open Sans", sans-serif;
 }
+/* line 426, ../sass/page/_index.scss */
+.section-customers-saying .customers-info {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+/* line 431, ../sass/page/_index.scss */
+.section-customers-saying .customers-info .customers-text-info {
+  margin-left: 20px;
+}
+/* line 434, ../sass/page/_index.scss */
+.section-customers-saying .customers-info .customers-text-info .customers-saying-position {
+  color: #86878b;
+  font-family: "Open Sans", sans-serif;
+}
+/* line 440, ../sass/page/_index.scss */
+.section-customers-saying .blockquote-customers {
+  margin-bottom: 20px;
+  padding: 25px 10px;
+  position: relative;
+  color: #86878b;
+  font-family: "Open Sans", sans-serif;
+  text-align: left;
+  background-color: #f5f5f5;
+}
+/* line 448, ../sass/page/_index.scss */
+.section-customers-saying .blockquote-customers:after {
+  content: '';
+  position: absolute;
+  left: 75px;
+  bottom: -35px;
+  border: 20px solid transparent;
+  border-top: 20px solid #f5f5f5;
+}
+/* line 458, ../sass/page/_index.scss */
+.section-customers-saying .slick-prev:before,
+.section-customers-saying .slick-next:before {
+  color: #ff9b51;
+}
 
 /*Stylish axure design section*/
-/* line 428, ../sass/page/_index.scss */
+/* line 465, ../sass/page/_index.scss */
 .section-stylish-axure-design {
   padding: 70px 0 60px;
   text-align: center;
   background-image: url("../images/paralax.png");
   background-size: cover;
 }
-/* line 434, ../sass/page/_index.scss */
+/* line 471, ../sass/page/_index.scss */
 .section-stylish-axure-design .stylish-design-title {
   color: #fff;
 }
-/* line 438, ../sass/page/_index.scss */
+/* line 475, ../sass/page/_index.scss */
 .section-stylish-axure-design .stylish-design-info {
   margin-bottom: 35px;
   color: #86878b;
   font-family: "Open Sans", sans-serif;
   color: #fff;
 }
-/* line 444, ../sass/page/_index.scss */
+/* line 481, ../sass/page/_index.scss */
 .section-stylish-axure-design .download-btn {
   padding: 15px 25px;
   background-color: transparent;
@@ -939,18 +987,18 @@ a:link {
 }
 
 /*Contact us section*/
-/* line 450, ../sass/page/_index.scss */
+/* line 487, ../sass/page/_index.scss */
 .section-contact-us {
   padding: 105px 0 80px;
   text-align: center;
 }
-/* line 454, ../sass/page/_index.scss */
+/* line 491, ../sass/page/_index.scss */
 .section-contact-us .section-contact-us-info {
   margin-bottom: 95px;
   color: #86878b;
   font-family: "Open Sans", sans-serif;
 }
-/* line 459, ../sass/page/_index.scss */
+/* line 496, ../sass/page/_index.scss */
 .section-contact-us .form-contact-us {
   display: -webkit-box;
   display: -moz-box;
@@ -964,7 +1012,7 @@ a:link {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
-/* line 464, ../sass/page/_index.scss */
+/* line 501, ../sass/page/_index.scss */
 .section-contact-us .form-contact-us .form-block {
   margin-bottom: 40px;
   display: -webkit-box;
@@ -981,7 +1029,7 @@ a:link {
   max-width: 50%;
 }
 @media (max-width: 768px) {
-  /* line 464, ../sass/page/_index.scss */
+  /* line 501, ../sass/page/_index.scss */
   .section-contact-us .form-contact-us .form-block {
     margin-bottom: 30px;
     -webkit-flex-basis: 100%;
@@ -990,7 +1038,7 @@ a:link {
     max-width: 100%;
   }
 }
-/* line 477, ../sass/page/_index.scss */
+/* line 514, ../sass/page/_index.scss */
 .section-contact-us .form-contact-us .form-block .item-contact-us,
 .section-contact-us .form-contact-us .form-block .field-contact-us {
   color: #bdbdbd;
@@ -998,16 +1046,16 @@ a:link {
   border: none;
   border-bottom: 1px solid #b7b7b7;
 }
-/* line 485, ../sass/page/_index.scss */
+/* line 522, ../sass/page/_index.scss */
 .section-contact-us .form-contact-us .form-block .field-contact-us {
   padding-bottom: 10px;
   margin: 34px 70px 0 0;
 }
-/* line 490, ../sass/page/_index.scss */
+/* line 527, ../sass/page/_index.scss */
 .section-contact-us .form-contact-us .form-block .item-contact-us {
   overflow: hidden;
 }
-/* line 495, ../sass/page/_index.scss */
+/* line 532, ../sass/page/_index.scss */
 .section-contact-us .form-contact-us .sent-message-btn {
   padding: 15px 25px;
   background-color: #ff9b51;
