@@ -1,7 +1,8 @@
 .header {
 
   .main-menu {
-    padding: 20px 0;
+    padding: 10px 0;
+    position: relative;
     background-color: $brand-color;
 
     &-wrapper {
@@ -14,22 +15,82 @@
     &-item {
       display: inline-block;
       color: $nav-color;
+
+      .hover-main-menu-block {
+        padding: 20px;
+        position: absolute;
+        display: none;
+        left: 12%;
+        top: 100%;
+        background-color: $bg-section;
+        z-index: 1;
+        overflow: hidden;
+
+        .wrapper-hover-menu {
+          @include display-flex();
+          @include flex-wrap();
+          @include justify-content(space-between);
+          @include align-items();
+        }
+
+        .sub-main-menu-list,
+        .list-preview-pages {
+          @include display-flex();
+          @include flex-wrap();
+          @include justify-content(space-between);
+        }
+
+        .preview-pages-img {
+          width: 135px;
+          height: 90px;
+        }
+
+        .item-preview-pages {
+          margin-right: 30px;
+
+          @media (max-width: 768px) {
+            margin-right: 10px;
+          }
+        }
+
+        .sub-main-menu-item {
+          margin-right: 50px;
+
+          @media (max-width: 1024px) {
+            margin-right: 20px;
+          }
+        }
+      }
+
+      &:hover {
+        .hover-main-menu-block,
+        .hover-main-menu-block:hover {
+          display: inline-block;
+        }
+      }
+
+      .sub-menu-link:hover,
+      .title-preview-pages:hover {
+        color: $secondary-brand-color;
+      }
     }
   }
   .main-menu-link {
+    padding: 20px;
+    margin-left: 25px;
     display: inline-block;
+
+    &:hover {
+      background-color: $secondary-brand-color;
+    }
 
     &:link,
     &:visited {
-      margin-left: 45px;
       @include light-gray-text();
       font-weight: 600;
 
       &:hover {
-        padding: 20px;
-        margin-left: 25px;
         color: $nav-color;
-        background-color: $secondary-brand-color;
       }
     }
   }
@@ -81,11 +142,16 @@
   .content-wrapper {
     @include display-flex();
     @include justify-content(space-between);
+    @include align-items(flex-end);
+
+    @media (max-width: 768px) {
+      @include flex-wrap();
+    }
   }
 
   &-form {
-    @include flex-basis(30%);
-    max-width: 30%;
+    @include flex-basis(35%);
+    max-width: 35%;
 
     @media (max-width: 768px) {
       margin-bottom: 30px;
@@ -93,8 +159,39 @@
       max-width: 100%;
     }
 
-    .field-header-form {
+    &-title {
+      padding: 20px 40px;
+      font-size: 1.5rem;
+      text-align: center;
+      background-color: $bg-section;
       width: 100%;
+      border-radius: 5px 5px 0 0;
+    }
+
+    .form-block {
+      padding: 0 40px 50px;
+      font-size: 1.5rem;
+      background-color: $price-text;
+      width: 100%;
+      text-align: center;
+
+      .field-header-form {
+        padding: 45px 10px 10px;
+        border: none;
+        border-bottom: 1px solid $bg-section;
+        display: block;
+        width: 100%;
+      }
+    }
+
+    .sent-message-btn {
+      @include make-btn($secondary-brand-color, 0px, 0px 0px 5px 5px);
+      width: 100%;
+      font-size: 1rem;
+    }
+
+    .text-secondary-color {
+      color: $secondary-brand-color;
     }
   }
 }

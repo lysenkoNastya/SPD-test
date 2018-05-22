@@ -280,6 +280,7 @@ a:link {
   &-list {
     @include display-flex();
     @include flex-wrap();
+    @include justify-content();
 
     .awesome-list-item {
       margin-bottom: 30px;
@@ -458,8 +459,13 @@ a:link {
     }
   }
 
+  .customers-saying-img {
+    border-radius: 50%;
+  }
+
   .slick-next {
     right: 0;
+
     &:before {
       content: "\f105";
     }
@@ -475,6 +481,8 @@ a:link {
 
   .slick-prev,
   .slick-next {
+    height: 35px;
+
     &:before {
       color: $secondary-brand-color;
       font-family: "Font Awesome 5 Free";
@@ -544,7 +552,6 @@ a:link {
 
       .item-contact-us,
       .field-contact-us {
-        color: $form-text;
         font-family: $text-font;
         border: none;
         border-bottom: 1px solid $section-border;
