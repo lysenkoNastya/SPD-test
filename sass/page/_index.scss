@@ -500,11 +500,45 @@ a:link {
 .section-stylish-axure-design {
   padding: 70px 0 60px;
   text-align: center;
-  background-image: url("../images/paralax.png");
+  //background-image: url("../images/parallax.png");
   background-size: cover;
+
+  .wrapper-parallax {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 2px;
+
+    .parallax {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 0 0 5px #000;
+
+      &:after {
+        content: " ";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transform: translateZ(-1px) scale(1.5);
+        background-size: 100%;
+        z-index: -1;
+      }
+    }
+
+    .bg-parallax:after {
+      background-image: url("../images/parallax.png");
+    }
+  }
 
   .stylish-design-title {
     color: $price-text;
+    display: block;
   }
 
   .stylish-design-info {

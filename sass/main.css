@@ -69,9 +69,11 @@ a:hover {
 /*Flex align items*/
 /*Flex direction*/
 .header .main-menu {
-  padding: 10px 0;
   position: relative;
   background-color: #37495e; }
+  @media (max-width: 768px) {
+    .header .main-menu {
+      padding: 20px 0; } }
   .header .main-menu-wrapper {
     display: -webkit-box;
     display: -moz-box;
@@ -94,11 +96,19 @@ a:hover {
       padding: 20px;
       position: absolute;
       display: none;
-      left: 12%;
+      left: 15%;
       top: 100%;
       background-color: #f5f5f5;
       z-index: 1;
       overflow: hidden; }
+      @media (max-width: 1024px) and (min-width: 992px) {
+        .header .main-menu-item .hover-main-menu-block {
+          left: 40%;
+          right: 3%; } }
+      @media (max-width: 768px) and (min-width: 576px) {
+        .header .main-menu-item .hover-main-menu-block {
+          right: 20%;
+          left: 10%; } }
       .header .main-menu-item .hover-main-menu-block .wrapper-hover-menu {
         display: -webkit-box;
         display: -moz-box;
@@ -128,16 +138,22 @@ a:hover {
         -ms-justify-content: space-between;
         justify-content: space-between; }
       .header .main-menu-item .hover-main-menu-block .preview-pages-img {
-        width: 135px;
-        height: 90px; }
+        width: 105px;
+        height: 70px; }
       .header .main-menu-item .hover-main-menu-block .item-preview-pages {
         margin-right: 30px; }
-        @media (max-width: 768px) {
+        @media (max-width: 1024px) {
+          .header .main-menu-item .hover-main-menu-block .item-preview-pages {
+            margin-right: 20px; } }
+        @media (max-width: 992px) {
           .header .main-menu-item .hover-main-menu-block .item-preview-pages {
             margin-right: 10px; } }
       .header .main-menu-item .hover-main-menu-block .sub-main-menu-item {
         margin-right: 50px; }
-        @media (max-width: 1024px) {
+        @media (max-width: 1200px) {
+          .header .main-menu-item .hover-main-menu-block .sub-main-menu-item {
+            margin-right: 30px; } }
+        @media (max-width: 992px) {
           .header .main-menu-item .hover-main-menu-block .sub-main-menu-item {
             margin-right: 20px; } }
     .header .main-menu-item:hover .hover-main-menu-block,
@@ -147,7 +163,7 @@ a:hover {
     .header .main-menu-item .title-preview-pages:hover {
       color: #ff9b51; }
 .header .main-menu-link {
-  padding: 20px;
+  padding: 25px 20px;
   margin-left: 25px;
   display: inline-block; }
   .header .main-menu-link:hover {
@@ -280,14 +296,11 @@ a:hover {
     color: #ccc; }
   .footer .social-icon-list-item {
     margin-bottom: 15px;
-    padding: 0 15px 0 40px;
+    padding: 0 15px;
     display: inline-block; }
-    @media (max-width: 1135px) {
+    @media (max-width: 576px) {
       .footer .social-icon-list-item {
-        padding-left: 25px; } }
-    @media (max-width: 960px) {
-      .footer .social-icon-list-item {
-        padding-left: 10px; } }
+        padding: 0 10px; } }
     .footer .social-icon-list-item-link {
       display: inline-block; }
     .footer .social-icon-list-item .fa-icon {
@@ -298,7 +311,7 @@ a:hover {
         transform: rotate(15deg); }
       @media (max-width: 576px) {
         .footer .social-icon-list-item .fa-icon {
-          font-size: 1.5rem; } }
+          font-size: 1.25rem; } }
   .footer .copyright-text,
   .footer .copyright-icon {
     color: #ccc;
@@ -798,10 +811,35 @@ a:link {
 .section-stylish-axure-design {
   padding: 70px 0 60px;
   text-align: center;
-  background-image: url("../images/paralax.png");
   background-size: cover; }
+  .section-stylish-axure-design .wrapper-parallax {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 2px; }
+    .section-stylish-axure-design .wrapper-parallax .parallax {
+      position: relative;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 0 0 5px #000; }
+      .section-stylish-axure-design .wrapper-parallax .parallax:after {
+        content: " ";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        transform: translateZ(-1px) scale(1.5);
+        background-size: 100%;
+        z-index: -1; }
+    .section-stylish-axure-design .wrapper-parallax .bg-parallax:after {
+      background-image: url("../images/parallax.png"); }
   .section-stylish-axure-design .stylish-design-title {
-    color: #fff; }
+    color: #fff;
+    display: block; }
   .section-stylish-axure-design .stylish-design-info {
     margin-bottom: 35px;
     color: #86878b;

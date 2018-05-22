@@ -26,3 +26,4 @@ window.FontAwesomeConfig = {
     searchPseudoElements: true
 };
 
+
