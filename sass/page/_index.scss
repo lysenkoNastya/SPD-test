@@ -47,7 +47,8 @@ a:link {
 
 .social-media-title,
 .section-sub-title,
-.standard-picture-title  {
+.standard-picture-title,
+.section-tabs-title {
   margin-bottom: 15px;
   @include sub-title-text();
 }
@@ -137,6 +138,111 @@ a:link {
           font-size: 1.5rem;
         }
       }
+    }
+  }
+}
+
+/*Tabs effect section*/
+.section-tabs-effect {
+  padding: 145px 0 115px;
+  background-color: $bg-section;
+
+  .section-tabs-wrapper {
+    @include display-flex();
+
+    @media (max-width: 992px) {
+      @include flex-wrap();
+    }
+  }
+
+  .section-tabs-title {
+    margin-bottom: 60px;
+  }
+
+  .tabs-menu-list {
+    margin-right: 100px;
+    @include display-flex();
+    @include flex-direction(column);
+    @include flex-shrink(0);
+
+    @media (max-width: 768px) {
+      margin-bottom: 20px;
+      @include flex-direction();
+    }
+
+    .tabs-menu-item {
+      padding: 50px 35px;
+      background-color: $brand-color;
+      color: $price-text;
+      text-transform: uppercase;
+      position: relative;
+      opacity: 0.8;
+      cursor: pointer;
+      z-index: 0;
+
+      @media (max-width: 768px) {
+        padding: 25px 35px;
+      }
+
+      @media (max-width: 768px) {
+        padding: 15px 25px;
+      }
+
+      &:hover,
+      &:active,
+      &.active {
+        background-color: $secondary-brand-color;
+      }
+    }
+  }
+
+  .tabs-content-list-item {
+    @include display-flex();
+    @include align-items(flex-start);
+
+    @media (max-width: 992px) {
+      @include flex-wrap();
+    }
+
+    .info-tabs-wrapper {
+      margin-right: 105px;
+      @include flex-basis(50%);
+      max-width: 50%;
+
+      @media (max-width: 992px) {
+        max-width: 50%;
+        @include flex-basis(50%);
+      }
+
+      @media (max-width: 568px) {
+        max-width: 100%;
+        @include flex-basis(100%);
+      }
+    }
+
+    .section-tabs-img {
+      @include flex-basis(33%);
+      max-width: 33%;
+    }
+  }
+
+  .section-tabs-text {
+    margin-bottom: 30px;
+    @include light-gray-text();
+  }
+
+  .tabs-info {
+    margin-bottom: 50px;
+  }
+
+  .download-btn {
+    @include make-btn($secondary-brand-color, 0px, 5px);
+
+    &:hover {
+      background-color: transparent;
+      border-color: $secondary-brand-color;
+      color: $secondary-brand-color;
+      border-width: 1px;
     }
   }
 }
