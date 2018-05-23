@@ -6,6 +6,10 @@
 
     @media (max-width: 768px) {
       padding: 20px 0;
+
+      &-list {
+       display: none;
+      }
     }
 
     &-wrapper {
@@ -13,6 +17,21 @@
       @include flex-wrap();
       @include justify-content(space-between);
       @include align-items();
+    }
+
+    &-btn {
+      display: none;
+      font-size: 1.75rem;
+      color: #fff;
+
+      @media (max-width: 768px) {
+        display: block;
+        margin-left: auto;
+      }
+    }
+
+    &-arrow {
+      display: none;
     }
 
     &-item {
@@ -83,16 +102,84 @@
         }
       }
 
-      &:hover {
-        .hover-main-menu-block,
-        .hover-main-menu-block:hover {
-          display: inline-block;
+      @media (min-width: 769px) {
+        &:hover {
+          .hover-main-menu-block,
+          .hover-main-menu-block:hover {
+            display: inline-block;
+          }
         }
       }
 
       .sub-menu-link:hover,
       .title-preview-pages:hover {
         color: $secondary-brand-color;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .main-nav-open & {
+      .main-menu {
+
+        &-list {
+          position: fixed;
+          background-color: #fff;
+          width: 100%;
+          top: 76px;
+          left: 0;
+          right: 0;
+          z-index: 1;
+          display: block;
+          overflow-y: auto;
+          height: 100%;
+        }
+
+        &-item {
+          @include display-flex();
+          @include flex-wrap();
+          text-align: center;
+          position: relative;
+
+          &.open {
+            background-color: $secondary-brand-color;
+
+            .hover-main-menu-block {
+              position: static;
+              display: block;
+            }
+
+            .fa-angle-down {
+              @include display-flex();
+            }
+
+            .fa-angle-right {
+              display: none;
+            }
+          }
+        }
+
+        &-link {
+          display: block;
+          margin-left: 0;
+          @include flex-basis(90%);
+          max-width: 90%;
+          font-size: 1.25rem;
+        }
+
+        &-arrow {
+          display: inline-block;
+          @include flex-basis(10%);
+          @include display-flex();
+          @include justify-content();
+          @include align-items();
+          max-width: 10%;
+          font-size: 1.75rem;
+
+          &.fa-angle-down {
+            display: none;
+          }
+        }
       }
     }
   }
@@ -113,6 +200,11 @@
       &:hover {
         color: $nav-color;
       }
+    }
+
+    @media (max-width: 992px) {
+      padding-left: 10px;
+      padding-right: 10px;
     }
   }
 
@@ -215,4 +307,8 @@
       color: $secondary-brand-color;
     }
   }
+}
+
+.main-nav-open {
+  position: fixed;
 }

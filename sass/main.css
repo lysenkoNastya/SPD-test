@@ -73,7 +73,9 @@ a:hover {
   background-color: #37495e; }
   @media (max-width: 768px) {
     .header .main-menu {
-      padding: 20px 0; } }
+      padding: 20px 0; }
+      .header .main-menu-list {
+        display: none; } }
   .header .main-menu-wrapper {
     display: -webkit-box;
     display: -moz-box;
@@ -89,6 +91,16 @@ a:hover {
     -webkit-align-items: center;
     -ms-align-items: center;
     align-items: center; }
+  .header .main-menu-btn {
+    display: none;
+    font-size: 1.75rem;
+    color: #fff; }
+    @media (max-width: 768px) {
+      .header .main-menu-btn {
+        display: block;
+        margin-left: auto; } }
+  .header .main-menu-arrow {
+    display: none; }
   .header .main-menu-item {
     display: inline-block;
     color: #c1c7cd; }
@@ -156,12 +168,77 @@ a:hover {
         @media (max-width: 992px) {
           .header .main-menu-item .hover-main-menu-block .sub-main-menu-item {
             margin-right: 20px; } }
-    .header .main-menu-item:hover .hover-main-menu-block,
-    .header .main-menu-item:hover .hover-main-menu-block:hover {
-      display: inline-block; }
+    @media (min-width: 769px) {
+      .header .main-menu-item:hover .hover-main-menu-block,
+      .header .main-menu-item:hover .hover-main-menu-block:hover {
+        display: inline-block; } }
     .header .main-menu-item .sub-menu-link:hover,
     .header .main-menu-item .title-preview-pages:hover {
       color: #ff9b51; }
+@media (max-width: 768px) {
+  .main-nav-open .header .main-menu-list {
+    position: fixed;
+    background-color: #fff;
+    width: 100%;
+    top: 76px;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    display: block;
+    overflow-y: auto;
+    height: 100%; }
+  .main-nav-open .header .main-menu-item {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    text-align: center;
+    position: relative; }
+    .main-nav-open .header .main-menu-item.open {
+      background-color: #ff9b51; }
+      .main-nav-open .header .main-menu-item.open .hover-main-menu-block {
+        position: static;
+        display: block; }
+      .main-nav-open .header .main-menu-item.open .fa-angle-down {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex; }
+      .main-nav-open .header .main-menu-item.open .fa-angle-right {
+        display: none; }
+  .main-nav-open .header .main-menu-link {
+    display: block;
+    margin-left: 0;
+    -webkit-flex-basis: 90%;
+    -ms-flex-basis: 90%;
+    flex-basis: 90%;
+    max-width: 90%;
+    font-size: 1.25rem; }
+  .main-nav-open .header .main-menu-arrow {
+    display: inline-block;
+    -webkit-flex-basis: 10%;
+    -ms-flex-basis: 10%;
+    flex-basis: 10%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    max-width: 10%;
+    font-size: 1.75rem; }
+    .main-nav-open .header .main-menu-arrow.fa-angle-down {
+      display: none; } }
 .header .main-menu-link {
   padding: 25px 20px;
   margin-left: 25px;
@@ -174,6 +251,10 @@ a:hover {
     font-weight: 600; }
     .header .main-menu-link:link:hover, .header .main-menu-link:visited:hover {
       color: #c1c7cd; }
+  @media (max-width: 992px) {
+    .header .main-menu-link {
+      padding-left: 10px;
+      padding-right: 10px; } }
 .header-content {
   padding: 140px 0;
   background-image: url("../images/bg_header.png");
@@ -286,6 +367,9 @@ a:hover {
     font-size: 1rem; }
   .header-form .text-secondary-color {
     color: #ff9b51; }
+
+.main-nav-open {
+  position: fixed; }
 
 .footer {
   padding: 20px 0 15px;
@@ -986,34 +1070,24 @@ a:link {
 
 /*Stylish axure design section*/
 .section-stylish-axure-design {
-  padding: 70px 0 60px;
   text-align: center;
-  background-size: cover; }
-  .section-stylish-axure-design .wrapper-parallax {
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    perspective: 2px; }
-    .section-stylish-axure-design .wrapper-parallax .parallax {
-      position: relative;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: white;
-      text-shadow: 0 0 5px #000; }
-      .section-stylish-axure-design .wrapper-parallax .parallax:after {
-        content: " ";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        transform: translateZ(-1px) scale(1.5);
-        background-size: 100%;
-        z-index: -1; }
-    .section-stylish-axure-design .wrapper-parallax .bg-parallax:after {
-      background-image: url("../images/parallax.png"); }
+  position: relative;
+  background: url("../images/parallax.png") fixed;
+  background-size: cover;
+  height: 100vh; }
+  .section-stylish-axure-design .parallax-wrapper {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -ms-justify-content: center;
+    justify-content: center;
+    height: 100%; }
   .section-stylish-axure-design .stylish-design-title {
     color: #fff;
     display: block; }

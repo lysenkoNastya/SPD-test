@@ -13,16 +13,19 @@
 </head>
 <body>
 <header class="header">
-    <nav class="main-menu">
+    <div class="main-menu">
         <div class="wrapper main-menu-wrapper">
             <a class="header-title-logo">
                 <img class="header-title-logo-img" src="images/logo.png" alt="logo">
             </a>
-            <ul class="main-menu-list">
+            <i class="fas fa-bars main-menu-btn mainMenuBtn_js"></i>
+            <nav class="main-menu-list">
                 <li class="main-menu-item">
                     <a class="main-menu-link active"  href="#features">
                         Features
                     </a>
+                    <i class="fas fa-angle-down main-menu-arrow"></i>
+                    <i class="fas fa-angle-right main-menu-arrow"></i>
                     <div class="hover-main-menu-block">
                         <div class="wrapper-hover-menu">
                             <ul class="list-preview-pages">
@@ -164,6 +167,8 @@
                     <a class="main-menu-link"  href="#about">
                         About
                     </a>
+                    <i class="fas fa-angle-down main-menu-arrow"></i>
+                    <i class="fas fa-angle-right main-menu-arrow"></i>
                     <div class="hover-main-menu-block">
                         <div class="wrapper-hover-menu">
                             <ul class="list-preview-pages">
@@ -305,6 +310,8 @@
                     <a class="main-menu-link" href="blog.html">
                         Pricing
                     </a>
+                    <i class="fas fa-angle-down main-menu-arrow"></i>
+                    <i class="fas fa-angle-right main-menu-arrow"></i>
                     <div class="hover-main-menu-block">
                         <div class="wrapper-hover-menu">
                             <ul class="list-preview-pages">
@@ -446,6 +453,8 @@
                     <a class="main-menu-link" href="#aboutus">
                         Reviews
                     </a>
+                    <i class="fas fa-angle-down main-menu-arrow"></i>
+                    <i class="fas fa-angle-right main-menu-arrow"></i>
                     <div class="hover-main-menu-block">
                         <div class="wrapper-hover-menu">
                             <ul class="list-preview-pages">
@@ -587,6 +596,8 @@
                     <a class="main-menu-link" href="#contact">
                         Contact
                     </a>
+                    <i class="fas fa-angle-down main-menu-arrow"></i>
+                    <i class="fas fa-angle-right main-menu-arrow"></i>
                     <div class="hover-main-menu-block">
                         <div class="wrapper-hover-menu">
                             <ul class="list-preview-pages">
@@ -724,9 +735,9 @@
                         </div>
                     </div>
                 </li>
-            </ul>
+            </nav>
         </div>
-    </nav>
+    </div>
     <div class="header-content">
         <div class="wrapper">
             <div class="content-wrapper">
@@ -1322,16 +1333,16 @@
     </div>
 </section>
 <section class="section-stylish-axure-design">
-    <div class="wrapper wrapper-parallax">
-        <div class="parallax bg-parallax">
-            <h2 class="stylish-design-title">
+    <div class="wrapper parallax-wrapper">
+        <div class="parallax">
+            <h2 class="stylish-design-title parallax">
                 Stylish axure design
             </h2>
-            <p class="stylish-design-info">
+            <p class="stylish-design-info parallax">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
             <form action="#" method="get" class="form-stylish-design">
-                <button class="download-btn">
+                <button class="download-btn static">
                     Download
                 </button>
             </form>
