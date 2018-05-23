@@ -148,6 +148,7 @@ a:link {
 
   .section-tabs-title {
     margin-bottom: 60px;
+    flex-basis: 100%;
   }
 
   .tabs-menu-list {
@@ -156,9 +157,23 @@ a:link {
     @include flex-direction(column);
     @include flex-shrink(0);
 
-    @media (max-width: 768px) {
+    @media (max-width: 992px) {
+      position: relative;
+      width: 100%;
       margin-bottom: 20px;
       @include flex-direction();
+
+      &:before {
+        content: '';
+        position: absolute;
+        display: block;
+        height: 2px;
+        width: 100%;
+        left: 0;
+        right: 0;
+        top: 100%;
+        background-color: $secondary-brand-color;
+      }
     }
 
     .tabs-menu-item {
@@ -171,12 +186,12 @@ a:link {
       cursor: pointer;
       z-index: 0;
 
-      @media (max-width: 768px) {
+      @media (max-width: 992px) {
         padding: 25px 35px;
       }
 
-      @media (max-width: 768px) {
-        padding: 15px 25px;
+      @media (max-width: 576px) {
+        padding: 15px;
       }
 
       &:hover,
@@ -187,12 +202,18 @@ a:link {
     }
   }
 
+  .tabs-content-list {
+    @include flex-basis(100%);
+    max-width: 100%;
+  }
+
   .tabs-content-list-item {
     @include display-flex();
     @include align-items(flex-start);
+    @include flex-wrap();
 
-    @media (max-width: 992px) {
-      @include flex-wrap();
+    @media (max-width: 768px) {
+      @include justify-content();
     }
 
     .info-tabs-wrapper {
@@ -205,7 +226,8 @@ a:link {
         @include flex-basis(50%);
       }
 
-      @media (max-width: 568px) {
+      @media (max-width: 768px) {
+        margin-right: 0;
         max-width: 100%;
         @include flex-basis(100%);
       }
@@ -214,7 +236,13 @@ a:link {
     .section-tabs-img {
       @include flex-basis(33%);
       max-width: 33%;
+
+      @media (max-width: 768px) {
+        order: -1;
+        max-width: 100%;
+      }
     }
+
   }
 
   .section-tabs-text {
