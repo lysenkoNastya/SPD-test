@@ -11,6 +11,7 @@ $(document).ready(function(){
         autoplaySpeed: 2000,
         slidesToShow: 3,
         slidesToScroll: 1,
+        autoplay: true,
         responsive: [
             {
                 breakpoint: 992,
@@ -62,8 +63,6 @@ $(document).ready(function(){
         $getWrapper.find($allTabs).hide();
         $getWrapper.find($allTabs).filter('[data-tab='+dataTab+']').show();
     });
-
-
 
 });
 

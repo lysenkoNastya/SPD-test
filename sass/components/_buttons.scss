@@ -1,0 +1,47 @@
+.download-btn {
+  @include make-btn(transparent, 1px, 0);
+
+  &:hover {
+    background-color: $secondary-brand-color;
+  }
+}
+
+.header-sent-message-btn {
+  @include make-btn($secondary-brand-color, 0px, 0px 0px 5px 5px);
+  width: 100%;
+  font-size: 1rem;
+}
+
+.main-menu-btn {
+  display: none;
+  font-size: 1.75rem;
+  color: $price-text;
+
+  @media (max-width: 768px) {
+    display: block;
+    margin-left: auto;
+  }
+}
+
+.section-tabs-effect-download-btn {
+  @include make-btn($secondary-brand-color, 0px, 5px);
+
+  &:hover {
+    background-color: transparent;
+    border-color: $secondary-brand-color;
+    color: $secondary-brand-color;
+    border-width: 1px;
+  }
+}
+
+.contact-us-sent-message-btn {
+  @include make-btn($secondary-brand-color, 0px, 10px);
+
+  &:hover {
+    padding-bottom: 13px;
+    background-color: transparent;
+    color: $secondary-brand-color;
+    border-color: $secondary-brand-color;
+    border-width: 1px;
+  }
+}

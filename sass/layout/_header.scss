@@ -19,17 +19,6 @@
       @include align-items();
     }
 
-    &-btn {
-      display: none;
-      font-size: 1.75rem;
-      color: #fff;
-
-      @media (max-width: 768px) {
-        display: block;
-        margin-left: auto;
-      }
-    }
-
     &-arrow {
       display: none;
     }
@@ -241,14 +230,6 @@
         margin-bottom: 40px;
         font-family: $text-font;
       }
-
-      .download-btn {
-        @include make-btn(transparent, 1px, 0);
-
-        &:hover {
-          background-color: $secondary-brand-color;
-        }
-      }
     }
   }
 
@@ -295,12 +276,6 @@
         display: block;
         width: 100%;
       }
-    }
-
-    .sent-message-btn {
-      @include make-btn($secondary-brand-color, 0px, 0px 0px 5px 5px);
-      width: 100%;
-      font-size: 1rem;
     }
 
     .text-secondary-color {

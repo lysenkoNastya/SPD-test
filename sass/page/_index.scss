@@ -104,10 +104,10 @@ a:link {
     max-width: 65%;
 
     @media (max-width: 992px) {
+      padding-left: 0;
       @include justify-content(space-around);
       @include flex-basis(100%);
       max-width: 100%;
-      padding-left: 0;
     }
 
     &-item {
@@ -158,30 +158,30 @@ a:link {
     @include flex-shrink(0);
 
     @media (max-width: 992px) {
+      margin-bottom: 20px;
       position: relative;
       width: 100%;
-      margin-bottom: 20px;
       @include flex-direction();
 
       &:before {
         content: '';
         position: absolute;
-        display: block;
-        height: 2px;
-        width: 100%;
         left: 0;
         right: 0;
         top: 100%;
+        display: block;
+        height: 2px;
+        width: 100%;
         background-color: $secondary-brand-color;
       }
     }
 
     .tabs-menu-item {
       padding: 50px 35px;
+      position: relative;
       background-color: $brand-color;
       color: $price-text;
       text-transform: uppercase;
-      position: relative;
       opacity: 0.8;
       cursor: pointer;
       z-index: 0;
@@ -230,6 +230,7 @@ a:link {
         margin-right: 0;
         max-width: 100%;
         @include flex-basis(100%);
+        order: 1;
       }
     }
 
@@ -238,11 +239,9 @@ a:link {
       max-width: 33%;
 
       @media (max-width: 768px) {
-        order: -1;
         max-width: 100%;
       }
     }
-
   }
 
   .section-tabs-text {
@@ -252,17 +251,6 @@ a:link {
 
   .tabs-info {
     margin-bottom: 50px;
-  }
-
-  .download-btn {
-    @include make-btn($secondary-brand-color, 0px, 5px);
-
-    &:hover {
-      background-color: transparent;
-      border-color: $secondary-brand-color;
-      color: $secondary-brand-color;
-      border-width: 1px;
-    }
   }
 }
 
@@ -515,6 +503,8 @@ a:link {
 
       .price-number {
         font-size: 6rem;
+        display: inline-block;
+        font-weight: 900;
       }
 
       .price-item-title,
@@ -582,82 +572,15 @@ a:link {
       }
     }
   }
-
-  .customers-saying-list-item {
-    padding: 0 55px;
-
-    @media (max-width: 992px) {
-      padding: 0 35px;
-    }
-
-    @media (max-width: 576px) {
-      padding: 0;
-    }
-  }
-
-  .blockquote-customers {
-    margin: 0  0 20px 0;
-    padding: 25px 10px;
-    position: relative;
-    @include light-gray-text();
-    text-align: left;
-    background-color: $bg-section;
-
-    &:after {
-      content: '';
-      position: absolute;
-      left: 15px;
-      bottom: -35px;
-      border: 20px solid transparent;
-      border-top: 20px solid $bg-section;
-    }
-  }
-
-  .customers-saying-img {
-    border-radius: 50%;
-    width: 75px;
-  }
-
-  .slick-next {
-    right: 0;
-
-    &:before {
-      content: "\f105";
-    }
-  }
-
-  .slick-prev {
-    left: 0;
-
-    &:before {
-      content: "\f104";
-    }
-  }
-
-  .slick-prev,
-  .slick-next {
-    height: 35px;
-
-    &:before {
-      color: $secondary-brand-color;
-      font-family: "Font Awesome 5 Free";
-      font-weight: 900;
-      font-size: 2.5rem;
-
-      @media (max-width: 576px) {
-        content: "";
-      }
-    }
-  }
 }
 
 /*Stylish axure design section*/
 .section-stylish-axure-design {
   text-align: center;
   position: relative;
-  background:url("../images/parallax.png") fixed;
+  background: url("../images/parallax.png") fixed;
   background-size: cover;
-  height: 100vh;
+  height: 325px;
 
   .parallax-wrapper {
     @include display-flex();
@@ -675,14 +598,6 @@ a:link {
     margin-bottom: 35px;
     @include light-gray-text();
     color: $price-text;
-  }
-
-  .download-btn {
-    @include make-btn(transparent, 1px, 0);
-
-    &:hover {
-      background-color: $secondary-brand-color;
-    }
   }
 }
 
@@ -734,18 +649,6 @@ a:link {
         font-family: $text-font;
         border: none;
         border-bottom: 1px solid $section-border;
-      }
-    }
-
-    .sent-message-btn {
-      @include make-btn($secondary-brand-color, 0px, 10px);
-
-      &:hover {
-        padding-bottom: 13px;
-        background-color: transparent;
-        color: $secondary-brand-color;
-        border-color: $secondary-brand-color;
-        border-width: 1px;
       }
     }
   }

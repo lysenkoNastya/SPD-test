@@ -1,0 +1,66 @@
+.customers-saying-list-item {
+  padding: 0 55px;
+
+  @media (max-width: 992px) {
+    padding: 0 35px;
+  }
+
+  @media (max-width: 576px) {
+    padding: 0;
+  }
+}
+
+.blockquote-customers {
+  margin: 0  0 20px 0;
+  padding: 25px 10px;
+  position: relative;
+  @include light-gray-text();
+  text-align: left;
+  background-color: $bg-section;
+
+  &:after {
+    content: '';
+    position: absolute;
+    left: 15px;
+    bottom: -35px;
+    border: 20px solid transparent;
+    border-top: 20px solid $bg-section;
+  }
+}
+
+.customers-saying-img {
+  border-radius: 50%;
+  width: 75px;
+}
+
+.slick-next {
+  right: 0;
+
+  &:before {
+    content: "\f105";
+  }
+}
+
+.slick-prev {
+  left: 0;
+
+  &:before {
+    content: "\f104";
+  }
+}
+
+.slick-prev,
+.slick-next {
+  height: 35px;
+
+  &:before {
+    color: $secondary-brand-color;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 2.5rem;
+
+    @media (max-width: 576px) {
+      content: "";
+    }
+  }
+}
